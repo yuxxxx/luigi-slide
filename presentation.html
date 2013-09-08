@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>Luigi - for Musicful life</title>
+	
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<!--<link rel="stylesheet" href="themes/style/web-2.0.css">-->
+	<link rel="stylesheet" href="themes/style/luigi.css">
+	<!--<link rel="stylesheet" href="themes/style/neon.css">-->
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+	
+	<!-- Required Modernizr file -->
+	<script src="modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide">
+	<h1>
+		<div><span class="L" style="padding:0 35px; background-color: #0c0; color: white; border-radius: 120px; border: white thin;">L</span>uigi</div>
+		<small style="font-size: 80%; color: #888;">an Android app</small>
+	</h1>
+</section>
+
+<section class="slide">
+	<h1>We made<br>an app</h1>
+</section>
+
+<section class="slide">
+	<h1><span class="L" style="padding:0 35px; background-color: #0c0; color: white; border-radius: 120px; border: white thin;">L</span>uigi</h1>
+</section>
+
+<style type="text/css">
+.slide img#screenshot {
+	-webkit-transform: translate(1000px, 0);
+	-webkit-transition: 1s;	
+}
+.slide .deck-current img#screenshot {
+	-webkit-transform: translate(0);
+}
+</style>
+<section class="slide">
+	<h2>Our &quot;Luigi&quot; provides you...</h2>
+	<script>
+	</script>
+	<div class="slide">
+	<ul style="margin-right: 350px; float:left;">
+		<li><b>Best music for your driving</b></li>
+		<li>Dissolve traffic jam<small>(maybe)</small></li>
+		<li>Unlock the doors</li>
+		<li>Start an engine</li>
+	</ul>
+	<img id="screenshot"src="screenshot.png" style="width:300px;">
+	<footer><p># This app's features are using GM Chevolet's Remote API.</p></footer>
+</section>
+
+<section class="slide">
+	<h1>Demonstration</h1>
+</section>
+
+<section class="slide">
+	<h2>Demonstration</h2>
+	<video controls src="./demo.mp4" />
+</section>
+<style type="text/css">
+section img#luigi {
+	-webkit-transition: -webkit-filter 0.7s ease 1.00s;
+	-webkit-filter: blur(0px);
+}
+section.deck-current img#luigi {
+	-webkit-filter: blur(10px);
+}
+section h1#thanks {
+	-webkit-transform: translate(350px, 1500px);
+	-webkit-transition: -webkit-transform 1.21s ease 0.50s;
+}
+section.deck-current #thanks {
+	-webkit-transform: translate(350px, 150px);
+}
+</style>
+<section class="slide">
+	<img id="luigi" src="http://3dsgames.ru/wp-content/gallery/mario-cart-7/mario-kart-7-art-5.jpg">
+	<h1 id="thanks">Thank You!</h1>
+	<small><cite>picture from 3dsgames.ru, (c) Nintendo</cite></small>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<small>Sep. 8, TechCrunch DISRUT SF 2013</small>
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="jquery-1.7.2.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
